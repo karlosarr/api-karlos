@@ -66,7 +66,7 @@ module.exports = {
        * https://sailsjs.com/config/datastores                                     *
        *                                                                           *
        ****************************************************************************/
-      ssl: true
+      // ssl: true
     }
   },
 
@@ -225,7 +225,7 @@ module.exports = {
      * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
      *                                                                          *
      ***************************************************************************/
-    onlyAllowOrigins: ["https://api-karlos.herokuapp.com"]
+    onlyAllowOrigins: ["http://localhost:1337"]
     /***************************************************************************
      *                                                                          *
      * If you are deploying a cluster of multiple servers and/or processes,     *
@@ -328,8 +328,8 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   custom: {
-    baseUrl: "https://api-karlos.herokuapp.com",
-    internalEmailAddress: "karlosarr@gmail.com"
+    baseUrl: "http://localhost:1337",
+    internalEmailAddress: "support@example.com"
 
     // mailgunDomain: 'mg.example.com',
     // mailgunSecret: 'key-prod_fake_bd32301385130a0bafe030c',
