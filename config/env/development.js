@@ -18,7 +18,7 @@
  * For more best practices and tips, see:
  * https://sailsjs.com/docs/concepts/deployment
  */
-
+const mongo = require('sails-mongo');
 module.exports = {
   /**************************************************************************
    *                                                                         *
@@ -67,6 +67,8 @@ module.exports = {
        *                                                                           *
        ****************************************************************************/
       // ssl: true
+      adapter: mongo,
+      url: 'mongodb://root:root@0.0.0.0:27017/user?authSource=admin'
     }
   },
 
@@ -81,7 +83,7 @@ module.exports = {
      * https://sailsjs.com/docs/concepts/models-and-orm/model-settings#?migrate *
      *                                                                          *
      ***************************************************************************/
-    migrate: "safe"
+    migrate: 'safe'
 
     /***************************************************************************
      *                                                                          *
@@ -225,7 +227,7 @@ module.exports = {
      * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
      *                                                                          *
      ***************************************************************************/
-    onlyAllowOrigins: ["http://localhost:1337"]
+    onlyAllowOrigins: ['http://localhost:1337']
     /***************************************************************************
      *                                                                          *
      * If you are deploying a cluster of multiple servers and/or processes,     *
@@ -259,7 +261,7 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   log: {
-    level: "debug"
+    level: 'debug'
   },
 
   http: {
@@ -328,8 +330,8 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   custom: {
-    baseUrl: "http://localhost:1337",
-    internalEmailAddress: "support@example.com"
+    baseUrl: 'http://localhost:1337',
+    internalEmailAddress: 'karlosarr@gmail.com'
 
     // mailgunDomain: 'mg.example.com',
     // mailgunSecret: 'key-prod_fake_bd32301385130a0bafe030c',

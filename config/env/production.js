@@ -18,7 +18,7 @@
  * For more best practices and tips, see:
  * https://sailsjs.com/docs/concepts/deployment
  */
-
+const mongo = require('sails-mongo');
 module.exports = {
   /**************************************************************************
    *                                                                         *
@@ -66,7 +66,9 @@ module.exports = {
        * https://sailsjs.com/config/datastores                                     *
        *                                                                           *
        ****************************************************************************/
-      ssl: true
+      ssl: true,
+      adapter: mongo,
+      url: 'mongodb://root:root@0.0.0.0:27017/items?authSource=admin'
     }
   },
 
@@ -81,7 +83,7 @@ module.exports = {
      * https://sailsjs.com/docs/concepts/models-and-orm/model-settings#?migrate *
      *                                                                          *
      ***************************************************************************/
-    migrate: "safe"
+    migrate: 'safe'
 
     /***************************************************************************
      *                                                                          *
@@ -225,7 +227,7 @@ module.exports = {
      * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
      *                                                                          *
      ***************************************************************************/
-    onlyAllowOrigins: ["https://api-karlos.herokuapp.com"]
+    onlyAllowOrigins: ['https://api-karlos.herokuapp.com']
     /***************************************************************************
      *                                                                          *
      * If you are deploying a cluster of multiple servers and/or processes,     *
@@ -259,7 +261,7 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   log: {
-    level: "debug"
+    level: 'debug'
   },
 
   http: {
@@ -328,8 +330,8 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   custom: {
-    baseUrl: "https://api-karlos.herokuapp.com",
-    internalEmailAddress: "karlosarr@gmail.com"
+    baseUrl: 'https://api-karlos.herokuapp.com',
+    internalEmailAddress: 'karlosarr@gmail.com'
 
     // mailgunDomain: 'mg.example.com',
     // mailgunSecret: 'key-prod_fake_bd32301385130a0bafe030c',
