@@ -10,12 +10,12 @@
     "@sailshq/socket.io-redis": "^5.2.0",
     "async": "2.0.1",
     "case": "^1.5.4",
-    "grunt": "^1.0.3",
-    "sails": "^1.0.2",
-    "sails-hook-grunt": "^3.0.2",
-    "sails-hook-orm": "^2.0.0-16",
-    "sails-hook-sockets": "^1.4.0",
-    "sails-mongo": "^1.0.0"
+    "grunt": "^1.2.0",
+    "sails": "^1.5.1",
+    "sails-hook-grunt": "^4.0.0",
+    "sails-hook-orm": "^4.0.1",
+    "sails-hook-sockets": "^2.0.0",
+    "sails-mongo": "^2.0.0"
   },
   "nyc": {
     "exclude": [
